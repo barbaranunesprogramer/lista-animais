@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Animais</title>
+    <title>Lista de Nomes Animais Resgatados</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <main>
         <form>
             <input class="nomeAnimal" id="animal" type="text" placeholder="Digite o nome de um animal" />
-            <button id="btn">Clique aqui</button>
+            <button class="button-item" id="btn">Clique aqui</button>
         </form>
         <div class="container-lista">
             <h2>Lista de Animais</h2>
             <hr />
-            <ul id="listaAnimais">
-                <p class="mensagem-lista-vazia">Não há nenhum item na lista no momento</p>
-
+            <p id="mensagemListaVazia" class="mensagem-lista-vazia">Não há nenhum item na lista no momento</p>
+            <ul id="listaAnimais"></ul>
         </div>
     </main>
     <script type="module" src="/script/script.js"></script>

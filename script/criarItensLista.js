@@ -1,3 +1,5 @@
+import { verificarListaVazia } from "./verificarLista.js";
+
 const listaDeAnimais = document.getElementById("listaAnimais");
 let contador = 2;
 
@@ -13,7 +15,12 @@ export function criarItemDaLista(nome, dataCompleta) {
     checkbox.id = "checkbox-" + contador++;
 
     checkbox.addEventListener("click", function () {
-        li.style.textDecoration = checkbox.checked ? "line-through" : "none";
+        // Quando o checkbox é marcado ou desmarcado
+        if (checkbox.checked) {
+            li.style.textDecoration = "line-through"; // Nome riscado
+        } else {
+            li.style.textDecoration = "none"; // Remove o risco
+        }
     });
 
     label.appendChild(checkbox);
@@ -28,4 +35,6 @@ export function criarItemDaLista(nome, dataCompleta) {
     li.appendChild(p);
 
     listaDeAnimais.appendChild(li);
+
+    verificarListaVazia(listaDeAnimais); // chama após adicionar
 }
